@@ -1,15 +1,24 @@
 #include <stdio.h>
- 
-int main () {
+#include <stdlib.h>
+#include <time.h>
 
-   /* local variable definition */
-   int n = 10;
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-   /* while loop execution */
-   while( n < 20 ) {
-      printf("%d\n", n);
-      n++;
-   }
- 
-   return 0;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n < 0)
+		printf("%d is negative\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is positive\n", n);
+	return (0);
 }
