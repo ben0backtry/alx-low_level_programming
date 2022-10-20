@@ -7,7 +7,6 @@
  * Return: 1 if the number is lowercase
  * Otherwise function returns 0 if character is not lowercase.
  */
-
 int _islower(int c)
 {
         if (c >= 97 && c <= 122)
